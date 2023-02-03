@@ -2,14 +2,13 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 import { useState } from 'react';
 import { useFonts, Kanit_400Regular } from '@expo-google-fonts/kanit';
 import LevelBar from './levelBar';
-import { languages } from './../data/languages'
 
-export default function Skills() {
+export default function Skills(props) {
     let [fontsLoaded] = useFonts({
         Kanit_400Regular,
     });
 
-    const [languagesInfo] = useState(languages)
+    const [languagesInfo] = useState(props.infos)
     if (!fontsLoaded) {
         return null;
     }
@@ -22,7 +21,7 @@ export default function Skills() {
                         <View key={index} style={styles.skillContainer}>
                             <LevelBar level={element.level} />
                             <Image style={styles.image} source={element.image}/>
-                            <Text style={styles.text}>{element.lang}</Text>
+                            <Text style={styles.text}>{element.name}</Text>
                         </View>
                     )
                 })

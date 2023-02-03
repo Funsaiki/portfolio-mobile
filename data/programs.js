@@ -1,14 +1,17 @@
 export const programs = [
     {
-        prog: 'Angular',
-        level: '80'
+        name: 'Angular',
+        level: '80',
+        image: require('./../assets/angular.png')
     },
     {
-        prog: 'SAP Analytics Cloud',
-        level: '40'
+        name: 'SAC',
+        level: '40',
+        image: require('./../assets/sap.png')
     },
     {
-        prog: 'Python',
-        level: '60'
+        name: 'Python',
+        level: '60',
+        image: require('./../assets/python.png')
     }
 ]
