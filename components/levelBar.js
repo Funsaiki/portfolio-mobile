@@ -14,11 +14,11 @@ export default function LevelBar(props) {
       backgroundColor: '#1A2232',
       width: '70%',
       height: '100%',
-      borderColor: '#42D6D3',
+      borderColor: '#8EB8E5',
       borderWidth: 1
     },
     level: {
-      backgroundColor: '#42D6D3',
+      backgroundColor: '#8EB8E5',
       width: `${level}%`,
       height: '100%'
     }

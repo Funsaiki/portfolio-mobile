@@ -35,12 +35,12 @@ const styles = StyleSheet.create({
     title: {
         fontFamily: 'Kanit_400Regular',
         fontSize: 30,
-        color: '#42D6D3',
+        color: '#8EB8E5',
         fontWeight: 'bold',
         margin: 5
     },
     text: {
-        color: '#a1a1a1',
+        color: '#7C99B4',
         margin: 10,
         textAlign: 'center',
     }

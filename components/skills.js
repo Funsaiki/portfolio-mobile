@@ -20,7 +20,7 @@ export default function Skills(props) {
                     return (
                         <View key={index} style={styles.skillContainer}>
                             <LevelBar level={element.level} />
-                            <Image style={styles.image} source={element.image}/>
+                            <Image resizeMode='contain' style={styles.image} source={element.image}/>
                             <Text style={styles.text}>{element.name}</Text>
                         </View>
                     )
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
         margin: 10
     },
     text: {
-        color: '#ffffff',
+        color: '#7C99B4',
         paddingLeft: 10
     },
     skillContainer: {
@@ -47,8 +47,8 @@ const styles = StyleSheet.create({
         margin: 10
     },
     image: {
-        height: 13.33333333,
-        width: 20,
+        height: 20,
+        width: 30,
         marginLeft: 10,
     }
 });

@@ -20,7 +20,7 @@ export default function Header() {
 
 const styles = StyleSheet.create({
   text: {
-    color: '#ffffff',
+    color: '#3A7CA5',
     paddingLeft: 10,
     fontSize: 26,
     fontFamily: 'Kanit_400Regular'

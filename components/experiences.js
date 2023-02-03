@@ -13,7 +13,7 @@ export default function Experiences() {
 
   return (
       <View style={styles.headerContainer}>
-        <Text style={styles.text}>Portfolio</Text>
+        <Text style={styles.text}>Expériences</Text>
       </View>
   );
 }
