@@ -14,18 +14,20 @@ export default function Skills(props) {
     }
 
     return (
-        <View style={styles.container}>
-            {
-                languagesInfo.map((element, index) => {
-                    return (
-                        <View key={index} style={styles.skillContainer}>
-                            <LevelBar level={element.level} />
-                            <Image resizeMode='contain' style={styles.image} source={element.image}/>
-                            <Text style={styles.text}>{element.name}</Text>
-                        </View>
-                    )
-                })
-            }
+        <View style={{ alignItems: 'center' }}>
+            <View style={styles.container}>
+                {
+                    languagesInfo.map((element, index) => {
+                        return (
+                            <View key={index} style={styles.skillContainer}>
+                                <LevelBar level={element.level} />
+                                <Image resizeMode='contain' style={styles.image} source={element.image} />
+                                <Text style={styles.text}>{element.name}</Text>
+                            </View>
+                        )
+                    })
+                }
+            </View>
         </View>
     );
 }
@@ -33,7 +35,7 @@ export default function Skills(props) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        margin: 10
+        margin: 10,
     },
     text: {
         color: '#7C99B4',

@@ -1,23 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, ScrollView, Text } from 'react-native';
+import { StyleSheet, ScrollView, Image, Pressable, Linking, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Header from './components/header';
 import Presentation from './components/presentation';
 import Skills from './components/skills';
-import { languages } from './data/languages'
-import { programs } from './data/programs';
+import { languages, programs, experiences, hobbies, contact } from './data/data'
 import { useState } from 'react';
 import { useFonts, Kanit_400Regular } from '@expo-google-fonts/kanit';
-import Experiences from './components/experiences';
+import Card from './components/card';
 import SectionTitle from './components/sectionTitle';
+import Contact from './components/contact';
 
 export default function App() {
   let [fontsLoaded] = useFonts({
     Kanit_400Regular,
   });
 
-  const [languageInfo, setLanguageInfo] = useState(languages)
-  const [programInfo] = useState(programs)
+  const [languageInfo, setLanguageInfo] = useState(languages);
+  const [programInfo, setProgramInfo] = useState(programs);
+  const [experienceInfo, setExperienceInfo] = useState(experiences);
+  const [hobbiesInfo, setHobbiesInfo] = useState(hobbies);
+  const [contactInfo, setContactInfo] = useState(contact);
 
   if (!fontsLoaded) {
     return null;
@@ -30,11 +33,15 @@ export default function App() {
       <ScrollView styles={styles.scrollView}>
         <Presentation />
         <SectionTitle title="Expériences" />
-        <Experiences />
+        <Card infos={experienceInfo} />
         <SectionTitle title="Compétences" />
         <Skills infos={programInfo} />
         <SectionTitle title="Langues" />
         <Skills infos={languageInfo} />
+        <SectionTitle title="Hobbies" />
+        <Card infos={hobbiesInfo} />
+        <SectionTitle title="Me contacter (cliquer)" />
+        <Contact infos={contactInfo} />
       </ScrollView>
     </SafeAreaView>
   );
@@ -47,5 +54,19 @@ const styles = StyleSheet.create({
   },
   scrollView: {
     flex: 1
+  },
+  button: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    margin: 10,
+    flex: 1
+  },
+  contactContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  contactIcon: {
+    width: 40
   }
 });

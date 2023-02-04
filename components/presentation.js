@@ -14,7 +14,14 @@ export default function Presentation() {
         <View style={styles.container}>
             <Image contentFit="contain" style={styles.image} source={require('./../assets/photo.jpg')} />
             <Text style={styles.title}>Johnny HU</Text>
-            <Text style={styles.text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Text>
+            <Text style={styles.text}>Bonjour, je suis un étudiant en 5ème année à l'ESTIAM. 
+            Actuellement, je suis en alternance chez Galigeo en tant que développeur Web. 
+            Au cours de mes études, j'ai acquis une solide formation en développement Web et en programmation. 
+            Je suis passionné par la création de solutions innovantes et je suis toujours à la recherche de nouveaux défis pour améliorer mes compétences. 
+            Chez Galigeo, je travaille sur des projets intéressants et je suis en mesure de mettre en pratique mes connaissances acquises lors de mes études. 
+            Je suis déterminé à continuer à développer mes compétences et à m'engager à fond dans chaque projet auquel je participe. 
+            Merci de prendre le temps de consulter mon portfolio. 
+            (ChatGPT)</Text>
         </View>
     );
 }
